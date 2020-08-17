@@ -24,7 +24,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static String HOSTNAME1="https://newsapi.org/v2/";
+    public static String HOSTNAME1="https://picsum.photos/";
 
     public static RestService getInterface() {
         Gson gson = new GsonBuilder()

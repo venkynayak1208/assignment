@@ -47,13 +47,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
         final ListResponse favouriteRespons = favouriteResponses.get(position);
 
-        if(favouriteRespons.ge()==null||favouriteRespons.getUrlToImage().equalsIgnoreCase(""))
+        /*if(favouriteRespons.ge()==null||favouriteRespons.getUrlToImage().equalsIgnoreCase(""))
         {
 
         }else{
            // Glide.with(context).load(favouriteRespons.getUrlToImage().toString()).into(holder.item_image);
 
-        }
+        }*/
 
         //holder.tv_title.setText(favouriteRespons.getTitle());
 
