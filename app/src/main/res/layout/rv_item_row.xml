@@ -50,10 +50,20 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                android:text="@{news.title}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                android:textSize="17sp"
+                android:textSize="16sp"
                 tools:text="Student who says she flushed hamster down toilet in Spirit Airlines flap has a replacement rodent, lawyer says"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="2dp"
+                android:textSize="13sp"
+                tools:text=""/>
 
 
         </RelativeLayout>

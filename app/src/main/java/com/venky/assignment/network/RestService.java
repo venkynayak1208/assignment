@@ -15,6 +15,7 @@ import retrofit2.http.Query;
 
 public interface RestService {
 
+    //calling api to get result
     @GET("v2/list?page=2&limit=20")
     Observable<ArrayList<ListResponse>> getList();
 }
