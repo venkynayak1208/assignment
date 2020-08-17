@@ -58,6 +58,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         }
 
         holder.tv_title.setText(favouriteRespons.getAuthor());
+        holder.tv_desc.setText("Url : "+favouriteRespons.getUrl()+"\n"+"Hieght :"+favouriteRespons.getHeight()+"\n"+"Width : "+favouriteRespons.getWidth()+"\n");
 
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +66,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
                  alertDialog = new AlertDialog.Builder((context));
 
                 alertDialog.setTitle("Information");
-                alertDialog.setMessage("\n\n"+"Author : "+favouriteRespons.getAuthor()+"\n"+"Hieght :"+favouriteRespons.getHeight()+"\n"+"Width : "+favouriteRespons.getWidth()+"\n");
+                alertDialog.setMessage("\n\n"+"Author : "+favouriteRespons.getAuthor()+"\n"+"Hieght :"+favouriteRespons.getHeight()+"\n"+"Width : "+favouriteRespons.getWidth()+"\n"+"Url : "+favouriteRespons.getUrl());
                 alertDialog.setPositiveButton(
                         "OK",
                         new DialogInterface.OnClickListener() {
@@ -90,7 +91,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView item_image;
-        TextView tvTripDate, tv_title;
+        TextView tv_desc, tv_title;
         CardView card;
 
         public MyViewHolder(View itemView) {
@@ -98,6 +99,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
             item_image = itemView.findViewById(R.id.news_thumbnail);
             tv_title = itemView.findViewById(R.id.news_title);
+            tv_desc = itemView.findViewById(R.id.tv_desc);
             card=itemView.findViewById(R.id.card);
         }
     }

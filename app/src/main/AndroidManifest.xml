@@ -27,7 +27,7 @@
         <activity android:name=".MainActivity"
             android:configChanges="screenLayout|screenSize|orientation"
             android:screenOrientation="portrait"
-            android:label="List"
+            android:label="Picsum List"
             android:theme="@style/AppTheme">
 
         </activity>
