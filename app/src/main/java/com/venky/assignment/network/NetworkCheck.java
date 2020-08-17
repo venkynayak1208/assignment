@@ -6,7 +6,7 @@ import android.net.NetworkInfo;
 import android.util.Log;
 
 /**
- * Created by Ceaselez on 11-Oct-17.
+ * Created by Venky on 17-Aug-20.
  */
 
 public class NetworkCheck {

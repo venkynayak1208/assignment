@@ -1,6 +1,8 @@
 package com.venky.assignment.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.text.format.DateUtils;
@@ -27,7 +29,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
     Context context;
     ArrayList<ListResponse> favouriteResponses = new ArrayList<>();
-
+    AlertDialog.Builder alertDialog;
     public ListAdapter(Context favouriteActivity, ArrayList<ListResponse> favouriteResponseArrayList) {
         this.context = favouriteActivity;
         this.favouriteResponses = favouriteResponseArrayList;
@@ -47,21 +49,35 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
 
         final ListResponse favouriteRespons = favouriteResponses.get(position);
 
-        /*if(favouriteRespons.ge()==null||favouriteRespons.getUrlToImage().equalsIgnoreCase(""))
+        if(favouriteRespons.getDownloadUrl()==null||favouriteRespons.getDownloadUrl().equalsIgnoreCase(""))
         {
 
         }else{
-           // Glide.with(context).load(favouriteRespons.getUrlToImage().toString()).into(holder.item_image);
+            Glide.with(context).load(favouriteRespons.getDownloadUrl().toString()).into(holder.item_image);
 
-        }*/
+        }
 
-        //holder.tv_title.setText(favouriteRespons.getTitle());
+        holder.tv_title.setText(favouriteRespons.getAuthor());
 
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                 alertDialog = new AlertDialog.Builder((context));
 
-                     }
+                alertDialog.setTitle("Information");
+                alertDialog.setMessage("\n\n"+"Author : "+favouriteRespons.getAuthor()+"\n"+"Hieght :"+favouriteRespons.getHeight()+"\n"+"Width : "+favouriteRespons.getWidth()+"\n");
+                alertDialog.setPositiveButton(
+                        "OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        }
+                );
+
+
+            alertDialog.show();
+        }
         });
 
 
@@ -81,7 +97,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
             super(itemView);
 
             item_image = itemView.findViewById(R.id.news_thumbnail);
-            tvTripDate = itemView.findViewById(R.id.news_time);
             tv_title = itemView.findViewById(R.id.news_title);
             card=itemView.findViewById(R.id.card);
         }

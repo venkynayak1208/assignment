@@ -55,18 +55,6 @@
                 android:textSize="17sp"
                 tools:text="Student who says she flushed hamster down toilet in Spirit Airlines flap has a replacement rodent, lawyer says"/>
 
-            <TextView
-                android:id="@+id/news_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/news_title"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                android:textSize="14sp"
-                tools:text="2 hours ago"/>
-
 
         </RelativeLayout>
 
