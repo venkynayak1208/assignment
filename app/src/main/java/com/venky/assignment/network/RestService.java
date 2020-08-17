@@ -10,7 +10,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 /**
- * Created by Venky on 09-Oct-19.
+ * Created by Venky on 17-Aug-20.
  */
 
 public interface RestService {
